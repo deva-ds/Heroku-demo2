@@ -1,0 +1,9 @@
+gensim
+nltk
+numpy
+pandas
+scikit_learn
+setuptools
+setuptools
+tqdm
+matplotlib
