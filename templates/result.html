@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Spam Detector For SMS Messages</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Spam</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+	{% endif %}
+
+	</div>
+	
+	
+	<div style="text-align:center; margin-top:20px;">
+		<!-- Wrap the button with an anchor tag and add the URL to its 'href' attribute -->
+		<a href="{{ url_for('home') }}" class="btn-link">
+			<button type="submit" class="btn">← Back to Home</button>
+		</a>
+	</div>
+
+
+</body>
+</html>
